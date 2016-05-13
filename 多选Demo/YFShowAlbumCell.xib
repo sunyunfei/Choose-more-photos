@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="YFShowAlbumCell" id="gTV-IL-0wX" customClass="YFShowAlbumCell">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="99"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="99"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mkz-uB-ZY6">
+                        <rect key="frame" x="1" y="1" width="98" height="97"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nO8-IZ-jbk">
+                        <rect key="frame" x="60" y="0.0" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="kAv-2P-zT9"/>
+                            <constraint firstAttribute="width" constant="40" id="tQx-ed-wlB"/>
+                        </constraints>
+                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                        <state key="normal" image="normal"/>
+                        <state key="selected" image="selected"/>
+                        <connections>
+                            <action selector="clickBtn:" destination="gTV-IL-0wX" eventType="touchUpInside" id="SL4-2u-xoT"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="nO8-IZ-jbk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="7Iy-Cp-E0i"/>
+                <constraint firstAttribute="bottom" secondItem="mkz-uB-ZY6" secondAttribute="bottom" constant="1" id="L9s-bv-GSp"/>
+                <constraint firstAttribute="trailing" secondItem="mkz-uB-ZY6" secondAttribute="trailing" constant="1" id="Ojv-Zv-EKK"/>
+                <constraint firstAttribute="trailing" secondItem="nO8-IZ-jbk" secondAttribute="trailing" id="Pr8-NS-oNL"/>
+                <constraint firstItem="mkz-uB-ZY6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="1" id="VJU-qv-GK1"/>
+                <constraint firstItem="mkz-uB-ZY6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="1" id="h7b-23-din"/>
+            </constraints>
+            <size key="customSize" width="132" height="114"/>
+            <connections>
+                <outlet property="imageView" destination="mkz-uB-ZY6" id="cHg-Wv-Yjp"/>
+                <outlet property="selectBtn" destination="nO8-IZ-jbk" id="dc1-IW-iBH"/>
+            </connections>
+            <point key="canvasLocation" x="541" y="265.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="normal" width="38" height="38"/>
+        <image name="selected" width="38" height="38"/>
+    </resources>
+</document>
